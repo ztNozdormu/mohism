@@ -1,0 +1,29 @@
+https://www.jianshu.com/p/55b325d1d275  参考架构图
+https://www.jianshu.com/p/37c6688c4fcb 多模块项目打包问题
+mohism-kernel 打包命令:mvn install -Dmaven.test.skip=true
+
+https://www.cnblogs.com/geekdc/p/9267341.html  dubbo搭建
+https://blog.csdn.net/qq_27127145/article/details/85775240 springBoot全局异常处理
+https://www.cnblogs.com/LUA123/p/9698315.html
+https://my.oschina.net/yanpenglei/blog/2875677 新版本dubbo使用
+https://blog.csdn.net/weixin_42231507/article/details/81301740  springBoot集成注解版本dubbo解决方案
+https://blog.csdn.net/happyteafriends/article/details/7451061  maven打包问题
+
+
+打包流程:1.选择顶级父pom进行打包
+        2.dubbo-admin使用一个，每个服务提供者指定对应的dubbo服务端口，不能冲突
+模块说明:
+
+      <module>mohism-kernel</module>
+      <module>mohism-system</module>
+      <module>mohism-msclould</module>
+      <module>mohism-ui</module>
+      <module>mohism-business</module>
+      <module>mohism-system-web</module>
+
+      mohism-kernel:核心模块 、公共模块【通用工具 你】
+      mohism-system:系统基础服务模块、通用基础服务模块【服务生产者】
+      mohism-msclould:微服务组件模块【dubbo远程调用组件、zuul网关组件、appolo配置中心、监控组件......】
+      mohism-ui:前端UI模块【系统管理UI模块、业务前端UI模块】
+      mohism-business:系统业务服务模块【通用业务模块、系统业务模块】
+      mohism-system-web:系统基础服务消费者【服务调用者】

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mohism-kernel</artifactId>
+        <groupId>cn.mohist.mohism</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>mohism-logger</artifactId>
+    <name>mohism-logger</name>
+    <packaging>jar</packaging>
+    <description>日志记录的客户端，包含调用链治理，以jar包方式集成在项目里</description>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>cn.mohist.mohism</groupId>
+            <artifactId>mohism-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.mohist.mohism</groupId>
+            <artifactId>mohism-validator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <version>1.2.2.RELEASE</version>
+        </dependency>
+    </dependencies>
+</project>

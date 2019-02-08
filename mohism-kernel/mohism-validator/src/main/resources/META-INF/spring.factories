@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+cn.mohist.mohism.common.validator.config.ValidatorAutoConfiguration

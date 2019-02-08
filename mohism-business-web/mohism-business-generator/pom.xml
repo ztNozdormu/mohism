@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mohism-business-web</artifactId>
+        <groupId>cn.mohist.mohism</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mohism-business-generator</artifactId>
+    <packaging>pom</packaging>
+
+    <name>mohism-business-generator</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+    <modules>
+        <module>mohism-generator-dao</module>
+        <module>mohism-generator-model</module>
+        <module>mohism-generator-service</module>
+        <module>mohism-generator-web</module>
+        <module>mohism-generator-common</module>
+    </modules>
+    <dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>cn.mohist.mohism</groupId>
+            <artifactId>mohism-generator-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.mohist.mohism</groupId>
+            <artifactId>mohism-generator-dao</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.mohist.mohism</groupId>
+            <artifactId>mohism-generator-model</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.mohist.mohism</groupId>
+            <artifactId>mohism-generator-service</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.mohist.mohism</groupId>
+            <artifactId>mohism-generator-web</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+    </dependencyManagement>
+</project>

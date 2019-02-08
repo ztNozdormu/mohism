@@ -1,0 +1,9 @@
+# AutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+cn.mohist.mohism.core.config.AopAutoConfiguration,\
+cn.mohist.mohism.core.config.RedisAutoConfiguration,\
+cn.mohist.mohism.core.config.FastjsonAutoConfiguration,\
+cn.mohist.mohism.core.config.MybatisDataSourceAutoConfiguration,\
+cn.mohist.mohism.core.config.PropertiesAutoConfiguration,\
+cn.mohist.mohism.core.config.UtilAutoConfiguration,\
+cn.mohist.mohism.core.config.DbInitializerAutoConfiguration

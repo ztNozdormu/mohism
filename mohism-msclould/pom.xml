@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mohism-master</artifactId>
+        <groupId>cn.mohist.mohism</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>mohism-msclould</artifactId>
+    <name>mohism-msclould</name>
+    <packaging>pom</packaging>
+    <description>mohism微服务基础组件模块(抽象)模块 注册中心、配置中心组件、服务监控组件、调用链追踪组件</description>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+    <modules>
+        <module>mohism-config-server</module>
+        <module>mohism-register-server</module>
+        <module>mohism-actuator-server</module>
+        <module>mohism-gateway-zuul</module>
+    </modules>
+    <properties>
+        <boot.dubbo.version>1.0.0</boot.dubbo.version>
+        <dubbo.version>2.6.2</dubbo.version>
+        <zkclient.version>0.11</zkclient.version>
+        <zookeeper.version>3.4.13</zookeeper.version>
+        <curator-framework.version>2.12.0</curator-framework.version>
+        <apollo-client.version>1.0.0</apollo-client.version>
+    </properties>
+<dependencyManagement>
+    <dependencies>
+        <!-- Spring Boot Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- Spring Boot jms activemq -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-activemq</artifactId>
+            <version>2.1.1.RELEASE</version>
+        </dependency>
+        <!-- Spring Boot Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--dubbo-->
+        <dependency>
+            <groupId>io.dubbo.springboot</groupId>
+            <artifactId>spring-boot-starter-dubbo</artifactId>
+            <version>${boot.dubbo.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo-serialization-kryo</artifactId>
+            <version>${dubbo.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.alibaba</groupId>
+                    <artifactId>dubbo-common</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--zookeeper-->
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>${zookeeper.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>${zkclient.version}</version>
+        </dependency>
+        <!-- apollo配置中心 -->
+        <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client</artifactId>
+            <version>${apollo-client.version}</version>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+</project>

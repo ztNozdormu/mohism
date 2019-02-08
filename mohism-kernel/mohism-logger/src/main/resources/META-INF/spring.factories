@@ -1,0 +1,3 @@
+# AutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+cn.mohist.mohism.common.logger.config.LoggerAutoConfiguration
